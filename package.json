@@ -1,0 +1,20 @@
+{
+  "name": "venom-cli",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "venom": "bin/venom"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "minimist": "^1.2.0",
+    "ncp": "^2.0.0",
+    "ora": "^3.4.0"
+  },
+  "dependencies": {
+    "npm": "^6.9.0"
+  }
+}
