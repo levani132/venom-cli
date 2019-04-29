@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/app.js'
+    app: './app.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -14,9 +14,23 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  "useBuiltIns": "entry"
+                }
+              ],
+              {
+                plugins: [
+                  '@babel/plugin-proposal-class-properties'
+                ]
+              }
+            ]
+          }
         }
       },
       {
@@ -32,7 +46,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: './src/index.html'
+      template: 'index.html'
     })
   ]
 }
