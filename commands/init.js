@@ -24,7 +24,8 @@ module.exports = args => {
     if (err) {
       return console.error(err);
     }
-    const projectName = process.cwd().substr(process.cwd().lastIndexOf('/') + 1);
+    const idx = process.cwd().lastIndexOf('/') + 1 || process.cwd().lastIndexOf('\\') + 1;
+    const projectName = process.cwd().substr(idx);
     console.log(`Project ${projectName} files successfully initialized!`);
     npm.load({
       loaded: false
