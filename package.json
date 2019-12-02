@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "repository": {
     "type": "git",
-    "url": "git+https://levani132@bitbucket.org/venom-project/venom-cli.git"
+    "url": "git+https://github.com/levani132/venom-cli.git"
   },
   "description": "",
   "bin": {
